@@ -17,8 +17,8 @@ import static org.junit.jupiter.api.Assertions.*;
 @DisplayName("Тест класса User")
 class UserTest {
     private static Validator validator;
-    User validUser;
-    User emptyUser;
+    private User validUser;
+    private User emptyUser;
 
     @BeforeEach
     void setUp() {

@@ -7,6 +7,9 @@ import ru.yandex.practicum.filmorate.validator.Marker;
 
 import java.time.LocalDate;
 
+/**
+ * User.
+ */
 @Data
 @Builder
 public class User {

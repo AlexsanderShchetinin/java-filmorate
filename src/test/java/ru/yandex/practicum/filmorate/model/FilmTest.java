@@ -19,8 +19,8 @@ import static org.junit.jupiter.api.Assertions.*;
 class FilmTest {
 
     private static Validator validator;
-    Film validFilm;
-    Film emptyFilm;
+    private Film validFilm;
+    private Film emptyFilm;
 
     @BeforeEach
     void setUp() {
