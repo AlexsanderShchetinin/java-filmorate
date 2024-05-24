@@ -9,11 +9,7 @@ import ru.yandex.practicum.filmorate.exceptoin.NotFoundException;
 import ru.yandex.practicum.filmorate.model.Film;
 import ru.yandex.practicum.filmorate.model.User;
 
-import java.util.Collection;
-import java.util.Comparator;
-import java.util.HashSet;
-import java.util.Objects;
-import java.util.stream.Collectors;
+import java.util.*;
 
 @Service
 @RequiredArgsConstructor
@@ -23,9 +19,15 @@ public class FilmServiceGeneral implements FilmService {
 
 
     private final Comparator<Film> likeComparator = (o1, o2) -> {
-        int likes1 = o1.getLikesId().size();
-        int likes2 = o2.getLikesId().size();
-        return Integer.compare(likes1, likes2);
+        Optional<Set<Long>> optLikes1 = Optional.ofNullable(o1.getLikesId());
+        Optional<Set<Long>> optLikes2 = Optional.ofNullable(o2.getLikesId());
+        if (optLikes1.isPresent() && optLikes2.isPresent()) {
+            int likes1 = o1.getLikesId().size();
+            int likes2 = o2.getLikesId().size();
+            if (likes1 > likes2) return -1;
+            else return 1;
+        }
+        return 0;
     };
 
     @Override
@@ -99,11 +101,24 @@ public class FilmServiceGeneral implements FilmService {
     @Override
     public Collection<Film> showPopularFilms(int amount) {
         Collection<Film> films = filmStorage.getAll();
-        if (films.size() < amount) {
-            throw new NotFoundException("Not enough films for view! count=" + amount + " ; film size=" + films.size());
-        }
-        return films.stream()
+        // отделяем фильмы имеющие лайки
+        Collection<Film> filmsWithLike = films.stream()
+                .filter(film -> film.getLikesId() != null)
+                .toList();
+        // сортируем и обрезаем по кол-ву amount
+        Collection<Film> sortedFilm = new ArrayList<>(filmsWithLike.stream()
                 .sorted(likeComparator)
-                .collect(Collectors.toList());
+                .limit(amount)
+                .toList());
+        // если остаются фильмы без лайков, которые нужно вернуть, то добавляем их в конец списка.
+        if (sortedFilm.size() < amount) {
+            int residual = amount - sortedFilm.size();
+            Collection<Film> filmsWithoutLikes = films.stream()
+                    .filter(film -> film.getLikesId() == null)
+                    .limit(residual)
+                    .toList();
+            sortedFilm.addAll(filmsWithoutLikes);
+        }
+        return sortedFilm;
     }
 }
