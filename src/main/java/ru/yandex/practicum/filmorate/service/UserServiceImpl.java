@@ -15,7 +15,7 @@ import java.util.Set;
 
 @Service
 @RequiredArgsConstructor
-public class UserServiceGeneral implements UserService {
+public class UserServiceImpl implements UserService {
 
     private final UserStorage storage;
 
