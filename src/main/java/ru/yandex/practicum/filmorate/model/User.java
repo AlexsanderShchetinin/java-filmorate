@@ -7,8 +7,8 @@ import lombok.Data;
 import ru.yandex.practicum.filmorate.validator.Marker;
 
 import java.time.LocalDate;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * User.
@@ -33,6 +33,8 @@ public class User {
     private LocalDate birthday;
 
     @JsonIgnore
-    private Set<Long> friendsId = new HashSet<>();    // Множество для хранения id пользователей, являющихся друзьями
+    private Map<Long, FriendStatus> friendsId = new HashMap<>();    // мапа для хранения id друзей и статуса дружбы
 
 }
+
+

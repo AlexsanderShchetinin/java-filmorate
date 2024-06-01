@@ -6,12 +6,10 @@ import ru.yandex.practicum.filmorate.dao.UserStorage;
 import ru.yandex.practicum.filmorate.exceptoin.LogicalException;
 import ru.yandex.practicum.filmorate.exceptoin.NoContentException;
 import ru.yandex.practicum.filmorate.exceptoin.NotFoundException;
+import ru.yandex.practicum.filmorate.model.FriendStatus;
 import ru.yandex.practicum.filmorate.model.User;
 
-import java.util.Collection;
-import java.util.Collections;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
 
 @Service
 @RequiredArgsConstructor
@@ -29,22 +27,20 @@ public class UserServiceImpl implements UserService {
                 .orElseThrow(() -> new NotFoundException("Friend not found with id=" + friendId));
         // Выполняем основную логику по добавлению в друзья
         // добавление friend в друзья к user
-        if (user.getFriendsId() == null) {
-            HashSet<Long> newSet = new HashSet<>();
-            newSet.add(friend.getId());
-            user.setFriendsId(newSet);
-        } else {
-            user.getFriendsId().add(friend.getId());
-        }
+        cooperation(friend, user);
         // добавление user в друзья к friend
-        if (friend.getFriendsId() == null) {
-            HashSet<Long> newSet = new HashSet<>();
-            newSet.add(user.getId());
-            friend.setFriendsId(newSet);
-        } else {
-            friend.getFriendsId().add(user.getId());
-        }
+        cooperation(user, friend);
         return new User[]{storage.update(user), storage.update(friend)};
+    }
+
+    private void cooperation(User user, User friend) {
+        if (friend.getFriendsId() == null) {
+            HashMap<Long, FriendStatus> newMap = new HashMap<>();
+            newMap.put(user.getId(), FriendStatus.WAITING);  // при добавлении в друзья первичный статус - неподтвержденный
+            friend.setFriendsId(newMap);
+        } else {
+            friend.getFriendsId().put(user.getId(), FriendStatus.WAITING);
+        }
     }
 
     @Override
@@ -59,7 +55,7 @@ public class UserServiceImpl implements UserService {
             throw new NoContentException("Users: " + user.getName() + " or " +
                     friend.getName() + " were not added friends.");
         }
-        if (user.getFriendsId().contains(friendId) && friend.getFriendsId().contains(userId)) {
+        if (user.getFriendsId().containsKey(friendId) && friend.getFriendsId().containsKey(userId)) {
             // Выполняем основную логику по удалению из друзей и обновляем репозиторий
             user.getFriendsId().remove(friend.getId());
             friend.getFriendsId().remove(user.getId());
@@ -79,7 +75,7 @@ public class UserServiceImpl implements UserService {
             return Collections.emptyList();
             //throw new NoContentException("User " + user.getName() + " has no friends");
         }
-        Set<Long> friendIds = user.getFriendsId();
+        Set<Long> friendIds = user.getFriendsId().keySet();
         return storage.getFriends(friendIds);
     }
 
@@ -96,8 +92,8 @@ public class UserServiceImpl implements UserService {
         if (otherUser.getFriendsId() == null) {
             throw new NotFoundException("User " + otherUser.getName() + " has no friends");
         }
-        final Set<Long> userFriendIds = user.getFriendsId();
-        final Set<Long> otherUserFriendIds = otherUser.getFriendsId();
+        final Set<Long> userFriendIds = user.getFriendsId().keySet();
+        final Set<Long> otherUserFriendIds = otherUser.getFriendsId().keySet();
         // находим пересечение двух множеств друзей
         userFriendIds.retainAll(otherUserFriendIds);
         return storage.getFriends(userFriendIds);

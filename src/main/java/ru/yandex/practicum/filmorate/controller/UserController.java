@@ -45,6 +45,10 @@ public class UserController {
         return updatedUser;
     }
 
+    /**
+     * @param id - идентификатор клиента, отправляющего запрос на сервер (т.е. тот кто отправляет приглашение)
+     * @param friendId  - идентификатор друга, к которому добавляются в друзья
+     */
     @PutMapping("/{id}/friends/{friendId}")
     public void addFriend(@PathVariable long id, @PathVariable long friendId) {
         log.info("Friend with id={} try add as friends to User with id={}", friendId, id);

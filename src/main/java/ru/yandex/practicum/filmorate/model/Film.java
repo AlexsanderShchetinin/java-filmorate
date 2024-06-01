@@ -39,4 +39,10 @@ public class Film {
     @JsonIgnore
     private Set<Long> likesId;    // Множество с id пользователей, поставивших лайк
 
+    private Set<Genre> genres;    // Жанр (у фильма может быть сразу несколько жанров)
+
+    private Rating rating;    // Рейтинг Ассоциации кинокомпаний
 }
+
+
+

@@ -15,3 +15,5 @@ _These controllers can process GET, POST and PUT requests:_
 
 _Validation of the request body takes place inside
 the model classes using annotations above the fields_
+
+![Screenshot of a scheme diagram data base](/filmarateDiagram.png)
