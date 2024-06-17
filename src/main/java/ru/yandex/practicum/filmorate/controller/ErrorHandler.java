@@ -13,6 +13,7 @@ import ru.yandex.practicum.filmorate.model.ErrorResponse;
 
 import java.io.PrintWriter;
 import java.io.StringWriter;
+import java.sql.SQLException;
 
 @Slf4j
 @RestControllerAdvice
@@ -29,6 +30,13 @@ public class ErrorHandler {
     @ResponseStatus(HttpStatus.BAD_REQUEST)
     public ErrorResponse handleValidationException(final LogicalException e) {
         log.debug("Incorrect data: {}", e.getMessage());
+        return new ErrorResponse(e.getMessage());
+    }
+
+    @ExceptionHandler
+    @ResponseStatus(HttpStatus.BAD_REQUEST)
+    public ErrorResponse handleSQLException(final SQLException e) {
+        log.debug("Incorrect sql data: {}", e.getMessage());
         return new ErrorResponse(e.getMessage());
     }
 

@@ -1,0 +1,220 @@
+<svg width="1435pt" height="1016pt" viewBox="0.00 0.00 1435.00 1016.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 1012)">
+<title>G</title>
+<!-- users -->
+<g id="node1" class="node">
+<title>users</title>
+<polygon fill="blue" stroke="none" points="483,-946 483,-1006 869,-1006 869,-946 483,-946"></polygon>
+<polygon fill="none" stroke="#29235c" points="483,-946 483,-1006 869,-1006 869,-946 483,-946"></polygon>
+<text text-anchor="start" x="633.3" y="-967.2" font-family="Helvetica,sans-Serif" font-weight="bold" font-size="32.00" fill="#ffffff">users</text>
+<polygon fill="#e7e2dd" stroke="none" points="483,-886 483,-946 869,-946 869,-886 483,-886"></polygon>
+<polygon fill="none" stroke="#29235c" points="483,-886 483,-946 869,-946 869,-886 483,-886"></polygon>
+<text text-anchor="start" x="494" y="-906.2" font-family="Helvetica,sans-Serif" font-size="32.00" fill="#29235c">user_id &#160;&#160;</text>
+<polygon fill="#e7e2dd" stroke="none" points="639.56,-896.6 639.56,-935 858,-935 858,-896.6 639.56,-896.6"></polygon>
+<text text-anchor="start" x="653.5" y="-907.2" font-family="Helvetica,sans-Serif" font-style="italic" font-size="32.00" fill="#29235c">LONG &#160;⤴️ pk</text>
+<polygon fill="#ffffff" stroke="none" points="483,-826 483,-886 869,-886 869,-826 483,-826"></polygon>
+<polygon fill="none" stroke="#29235c" points="483,-826 483,-886 869,-886 869,-826 483,-826"></polygon>
+<text text-anchor="start" x="494" y="-846.2" font-family="Helvetica,sans-Serif" font-size="32.00" fill="#29235c">login &#160;&#160;</text>
+<polygon fill="#ffffff" stroke="none" points="588.28,-836.6 588.28,-875 858.58,-875 858.58,-836.6 588.28,-836.6"></polygon>
+<text text-anchor="start" x="588.28" y="-847.2" font-family="Helvetica,sans-Serif" font-style="italic" font-size="32.00" fill="#29235c">VARCHAR(100) * &#160;</text>
+<polygon fill="#e7e2dd" stroke="none" points="483,-766 483,-826 869,-826 869,-766 483,-766"></polygon>
+<polygon fill="none" stroke="#29235c" points="483,-766 483,-826 869,-826 869,-766 483,-766"></polygon>
+<text text-anchor="start" x="494" y="-786.2" font-family="Helvetica,sans-Serif" font-size="32.00" fill="#29235c">username &#160;&#160;</text>
+<polygon fill="#e7e2dd" stroke="none" points="668.91,-776.6 668.91,-815 858,-815 858,-776.6 668.91,-776.6"></polygon>
+<text text-anchor="start" x="674.86" y="-787.2" font-family="Helvetica,sans-Serif" font-style="italic" font-size="32.00" fill="#29235c">VARCHAR &#160;&#160;</text>
+<polygon fill="#ffffff" stroke="none" points="483,-706 483,-766 869,-766 869,-706 483,-706"></polygon>
+<polygon fill="none" stroke="#29235c" points="483,-706 483,-766 869,-766 869,-706 483,-706"></polygon>
+<text text-anchor="start" x="494" y="-726.2" font-family="Helvetica,sans-Serif" font-size="32.00" fill="#29235c">email &#160;&#160;</text>
+<polygon fill="#ffffff" stroke="none" points="636,-716.6 636,-755 858,-755 858,-716.6 636,-716.6"></polygon>
+<text text-anchor="start" x="674.86" y="-727.2" font-family="Helvetica,sans-Serif" font-style="italic" font-size="32.00" fill="#29235c">VARCHAR &#160;&#160;</text>
+<polygon fill="#e7e2dd" stroke="none" points="483,-646 483,-706 869,-706 869,-646 483,-646"></polygon>
+<polygon fill="none" stroke="#29235c" points="483,-646 483,-706 869,-706 869,-646 483,-646"></polygon>
+<text text-anchor="start" x="494" y="-666.2" font-family="Helvetica,sans-Serif" font-size="32.00" fill="#29235c">birthday &#160;&#160;</text>
+<polygon fill="#e7e2dd" stroke="none" points="690.25,-656.6 690.25,-695 858,-695 858,-656.6 690.25,-656.6"></polygon>
+<text text-anchor="start" x="745.98" y="-667.2" font-family="Helvetica,sans-Serif" font-style="italic" font-size="32.00" fill="#29235c">DATE &#160;&#160;</text>
+<polygon fill="none" stroke="#29235c" stroke-width="2" points="482,-645 482,-1007 870,-1007 870,-645 482,-645"></polygon>
+</g>
+<!-- mpas -->
+<g id="node2" class="node">
+<title>mpas</title>
+<polygon fill="blue" stroke="none" points="959,-564 959,-624 1425,-624 1425,-564 959,-564"></polygon>
+<polygon fill="none" stroke="#29235c" points="959,-564 959,-624 1425,-624 1425,-564 959,-564"></polygon>
+<text text-anchor="start" x="1150.2" y="-585.2" font-family="Helvetica,sans-Serif" font-weight="bold" font-size="32.00" fill="#ffffff">mpas</text>
+<polygon fill="#e7e2dd" stroke="none" points="959,-504 959,-564 1425,-564 1425,-504 959,-504"></polygon>
+<polygon fill="none" stroke="#29235c" points="959,-504 959,-564 1425,-564 1425,-504 959,-504"></polygon>
+<text text-anchor="start" x="970" y="-524.2" font-family="Helvetica,sans-Serif" font-size="32.00" fill="#29235c">rating_id &#160;&#160;</text>
+<polygon fill="#e7e2dd" stroke="none" points="1138.69,-514.6 1138.69,-553 1414,-553 1414,-514.6 1138.69,-514.6"></polygon>
+<text text-anchor="start" x="1157.95" y="-525.2" font-family="Helvetica,sans-Serif" font-style="italic" font-size="32.00" fill="#29235c">INTEGER &#160;⤴️ pk</text>
+<polygon fill="#ffffff" stroke="none" points="959,-444 959,-504 1425,-504 1425,-444 959,-444"></polygon>
+<polygon fill="none" stroke="#29235c" points="959,-444 959,-504 1425,-504 1425,-444 959,-444"></polygon>
+<text text-anchor="start" x="970" y="-464.2" font-family="Helvetica,sans-Serif" font-size="32.00" fill="#29235c">rating_name &#160;&#160;</text>
+<polygon fill="#ffffff" stroke="none" points="1174.56,-454.6 1174.56,-493 1414.61,-493 1414.61,-454.6 1174.56,-454.6"></polygon>
+<text text-anchor="start" x="1174.56" y="-465.2" font-family="Helvetica,sans-Serif" font-style="italic" font-size="32.00" fill="#29235c">VARCHAR(15) &#160;&#160;</text>
+<polygon fill="none" stroke="#29235c" stroke-width="2" points="958,-443 958,-625 1426,-625 1426,-443 958,-443"></polygon>
+</g>
+<!-- films -->
+<g id="node3" class="node">
+<title>films</title>
+<polygon fill="blue" stroke="none" points="443,-564 443,-624 909,-624 909,-564 443,-564"></polygon>
+<polygon fill="none" stroke="#29235c" points="443,-564 443,-624 909,-624 909,-564 443,-564"></polygon>
+<text text-anchor="start" x="638.66" y="-585.2" font-family="Helvetica,sans-Serif" font-weight="bold" font-size="32.00" fill="#ffffff">films</text>
+<polygon fill="#e7e2dd" stroke="none" points="443,-504 443,-564 909,-564 909,-504 443,-504"></polygon>
+<polygon fill="none" stroke="#29235c" points="443,-504 443,-564 909,-564 909,-504 443,-504"></polygon>
+<text text-anchor="start" x="454" y="-524.2" font-family="Helvetica,sans-Serif" font-size="32.00" fill="#29235c">film_id &#160;&#160;</text>
+<polygon fill="#e7e2dd" stroke="none" points="633.32,-514.6 633.32,-553 898,-553 898,-514.6 633.32,-514.6"></polygon>
+<text text-anchor="start" x="693.5" y="-525.2" font-family="Helvetica,sans-Serif" font-style="italic" font-size="32.00" fill="#29235c">LONG &#160;⤴️ pk</text>
+<polygon fill="#ffffff" stroke="none" points="443,-444 443,-504 909,-504 909,-444 443,-444"></polygon>
+<polygon fill="none" stroke="#29235c" points="443,-444 443,-504 909,-504 909,-444 443,-444"></polygon>
+<text text-anchor="start" x="454" y="-464.2" font-family="Helvetica,sans-Serif" font-size="32.00" fill="#29235c">film_name &#160;&#160;</text>
+<polygon fill="#ffffff" stroke="none" points="628.28,-454.6 628.28,-493 898.58,-493 898.58,-454.6 628.28,-454.6"></polygon>
+<text text-anchor="start" x="628.28" y="-465.2" font-family="Helvetica,sans-Serif" font-style="italic" font-size="32.00" fill="#29235c">VARCHAR(100) * &#160;</text>
+<polygon fill="#e7e2dd" stroke="none" points="443,-384 443,-444 909,-444 909,-384 443,-384"></polygon>
+<polygon fill="none" stroke="#29235c" points="443,-384 443,-444 909,-444 909,-384 443,-384"></polygon>
+<text text-anchor="start" x="454" y="-404.2" font-family="Helvetica,sans-Serif" font-size="32.00" fill="#29235c">description &#160;&#160;</text>
+<polygon fill="#e7e2dd" stroke="none" points="637.79,-394.6 637.79,-433 898,-433 898,-394.6 637.79,-394.6"></polygon>
+<text text-anchor="start" x="640.16" y="-405.2" font-family="Helvetica,sans-Serif" font-style="italic" font-size="32.00" fill="#29235c">VARCHAR(200) &#160;&#160;</text>
+<polygon fill="#ffffff" stroke="none" points="443,-324 443,-384 909,-384 909,-324 443,-324"></polygon>
+<polygon fill="none" stroke="#29235c" points="443,-324 443,-384 909,-384 909,-324 443,-324"></polygon>
+<text text-anchor="start" x="454" y="-344.2" font-family="Helvetica,sans-Serif" font-size="32.00" fill="#29235c">release_date &#160;&#160;</text>
+<polygon fill="#ffffff" stroke="none" points="737.38,-334.6 737.38,-373 898,-373 898,-334.6 737.38,-334.6"></polygon>
+<text text-anchor="start" x="809.05" y="-345.2" font-family="Helvetica,sans-Serif" font-style="italic" font-size="32.00" fill="#29235c">date &#160;&#160;</text>
+<polygon fill="#e7e2dd" stroke="none" points="443,-264 443,-324 909,-324 909,-264 443,-264"></polygon>
+<polygon fill="none" stroke="#29235c" points="443,-264 443,-324 909,-324 909,-264 443,-264"></polygon>
+<text text-anchor="start" x="454" y="-284.2" font-family="Helvetica,sans-Serif" font-size="32.00" fill="#29235c">duration &#160;&#160;</text>
+<polygon fill="#e7e2dd" stroke="none" points="716.92,-274.6 716.92,-313 898,-313 898,-274.6 716.92,-274.6"></polygon>
+<text text-anchor="start" x="837.53" y="-285.2" font-family="Helvetica,sans-Serif" font-style="italic" font-size="32.00" fill="#29235c">int &#160;&#160;</text>
+<polygon fill="#ffffff" stroke="none" points="443,-204 443,-264 909,-264 909,-204 443,-204"></polygon>
+<polygon fill="none" stroke="#29235c" points="443,-204 443,-264 909,-264 909,-204 443,-204"></polygon>
+<text text-anchor="start" x="454" y="-224.2" font-family="Helvetica,sans-Serif" font-size="32.00" fill="#29235c">rating_id &#160;&#160;</text>
+<polygon fill="#ffffff" stroke="none" points="720.48,-214.6 720.48,-253 898,-253 898,-214.6 720.48,-214.6"></polygon>
+<text text-anchor="start" x="837.53" y="-225.2" font-family="Helvetica,sans-Serif" font-style="italic" font-size="32.00" fill="#29235c">int &#160;&#160;</text>
+<polygon fill="none" stroke="#29235c" stroke-width="2" points="442,-203 442,-625 910,-625 910,-203 442,-203"></polygon>
+</g>
+<!-- films&#45;&gt;mpas -->
+<!-- films&#45;&gt;mpas -->
+<g id="edge2" class="edge">
+<title>films:e-&gt;mpas:w</title>
+<path fill="none" stroke="#94a3b8" d="M910,-234C1040.94,-234 836.09,-516.11 946.7,-533.19"></path>
+<polygon fill="#94a3b8" stroke="#94a3b8" points="946.27,-536.67 956.49,-533.89 946.77,-529.69 946.27,-536.67"></polygon>
+</g>
+<!-- likes_film -->
+<g id="node4" class="node">
+<title>likes_film</title>
+<polygon fill="blue" stroke="none" points="62.5,-624 62.5,-684 332.5,-684 332.5,-624 62.5,-624"></polygon>
+<polygon fill="none" stroke="#29235c" points="62.5,-624 62.5,-684 332.5,-684 332.5,-624 62.5,-624"></polygon>
+<text text-anchor="start" x="124.57" y="-645.2" font-family="Helvetica,sans-Serif" font-weight="bold" font-size="32.00" fill="#ffffff">likes_film</text>
+<polygon fill="#e7e2dd" stroke="none" points="62.5,-564 62.5,-624 332.5,-624 332.5,-564 62.5,-564"></polygon>
+<polygon fill="none" stroke="#29235c" points="62.5,-564 62.5,-624 332.5,-624 332.5,-564 62.5,-564"></polygon>
+<text text-anchor="start" x="73.5" y="-584.2" font-family="Helvetica,sans-Serif" font-size="32.00" fill="#29235c">film_id &#160;&#160;</text>
+<polygon fill="#e7e2dd" stroke="none" points="198.39,-574.6 198.39,-613 321.5,-613 321.5,-574.6 198.39,-574.6"></polygon>
+<text text-anchor="start" x="204.14" y="-585.2" font-family="Helvetica,sans-Serif" font-style="italic" font-size="32.00" fill="#29235c">LONG &#160;&#160;</text>
+<polygon fill="#ffffff" stroke="none" points="62.5,-504 62.5,-564 332.5,-564 332.5,-504 62.5,-504"></polygon>
+<polygon fill="none" stroke="#29235c" points="62.5,-504 62.5,-564 332.5,-564 332.5,-504 62.5,-504"></polygon>
+<text text-anchor="start" x="73.5" y="-524.2" font-family="Helvetica,sans-Serif" font-size="32.00" fill="#29235c">user_id &#160;&#160;</text>
+<polygon fill="#ffffff" stroke="none" points="205.12,-514.6 205.12,-553 322.48,-553 322.48,-514.6 205.12,-514.6"></polygon>
+<text text-anchor="start" x="205.12" y="-525.2" font-family="Helvetica,sans-Serif" font-style="italic" font-size="32.00" fill="#29235c">LONG &#160;&#160;</text>
+<polygon fill="none" stroke="#29235c" stroke-width="2" points="61.5,-503 61.5,-685 333.5,-685 333.5,-503 61.5,-503"></polygon>
+</g>
+<!-- likes_film&#45;&gt;users -->
+<!-- likes_film&#45;&gt;users -->
+<g id="edge6" class="edge">
+<title>likes_film:e-&gt;users:w</title>
+<path fill="none" stroke="#94a3b8" d="M333.5,-534C511.74,-534 308.93,-899.76 470.8,-915.48"></path>
+<polygon fill="#94a3b8" stroke="#94a3b8" points="470.34,-918.96 480.49,-915.93 470.66,-911.97 470.34,-918.96"></polygon>
+</g>
+<!-- likes_film&#45;&gt;films -->
+<!-- likes_film&#45;&gt;films -->
+<g id="edge4" class="edge">
+<title>likes_film:e-&gt;films:w</title>
+<path fill="none" stroke="#94a3b8" d="M333.5,-594C384.51,-594 386.84,-542.58 430.62,-534.94"></path>
+<polygon fill="#94a3b8" stroke="#94a3b8" points="430.81,-538.44 440.49,-534.12 430.24,-531.46 430.81,-538.44"></polygon>
+</g>
+<!-- friends -->
+<g id="node5" class="node">
+<title>friends</title>
+<polygon fill="blue" stroke="none" points="2,-946 2,-1006 393,-1006 393,-946 2,-946"></polygon>
+<polygon fill="none" stroke="#29235c" points="2,-946 2,-1006 393,-1006 393,-946 2,-946"></polygon>
+<text text-anchor="start" x="144.16" y="-967.2" font-family="Helvetica,sans-Serif" font-weight="bold" font-size="32.00" fill="#ffffff">friends</text>
+<polygon fill="#e7e2dd" stroke="none" points="2,-886 2,-946 393,-946 393,-886 2,-886"></polygon>
+<polygon fill="none" stroke="#29235c" points="2,-886 2,-946 393,-946 393,-886 2,-886"></polygon>
+<text text-anchor="start" x="13" y="-906.2" font-family="Helvetica,sans-Serif" font-size="32.00" fill="#29235c">user_id &#160;&#160;</text>
+<polygon fill="#e7e2dd" stroke="none" points="204.63,-896.6 204.63,-935 382,-935 382,-896.6 204.63,-896.6"></polygon>
+<text text-anchor="start" x="264.64" y="-907.2" font-family="Helvetica,sans-Serif" font-style="italic" font-size="32.00" fill="#29235c">LONG &#160;&#160;</text>
+<polygon fill="#ffffff" stroke="none" points="2,-826 2,-886 393,-886 393,-826 2,-826"></polygon>
+<polygon fill="none" stroke="#29235c" points="2,-826 2,-886 393,-886 393,-826 2,-826"></polygon>
+<text text-anchor="start" x="13" y="-846.2" font-family="Helvetica,sans-Serif" font-size="32.00" fill="#29235c">friend_id &#160;&#160;</text>
+<polygon fill="#ffffff" stroke="none" points="213.53,-836.6 213.53,-875 382,-875 382,-836.6 213.53,-836.6"></polygon>
+<text text-anchor="start" x="264.64" y="-847.2" font-family="Helvetica,sans-Serif" font-style="italic" font-size="32.00" fill="#29235c">LONG &#160;&#160;</text>
+<polygon fill="#e7e2dd" stroke="none" points="2,-766 2,-826 393,-826 393,-766 2,-766"></polygon>
+<polygon fill="none" stroke="#29235c" points="2,-766 2,-826 393,-826 393,-766 2,-766"></polygon>
+<text text-anchor="start" x="13" y="-786.2" font-family="Helvetica,sans-Serif" font-size="32.00" fill="#29235c">status &#160;&#160;</text>
+<polygon fill="#e7e2dd" stroke="none" points="125.05,-776.6 125.05,-815 382.89,-815 382.89,-776.6 125.05,-776.6"></polygon>
+<text text-anchor="start" x="125.05" y="-787.2" font-family="Helvetica,sans-Serif" font-style="italic" font-size="32.00" fill="#29235c">VARCHAR(255) &#160;&#160;</text>
+<polygon fill="none" stroke="#29235c" stroke-width="2" points="1,-765 1,-1007 394,-1007 394,-765 1,-765"></polygon>
+</g>
+<!-- friends&#45;&gt;users -->
+<!-- friends&#45;&gt;users -->
+<g id="edge8" class="edge">
+<title>friends:e-&gt;users:w</title>
+<path fill="none" stroke="#94a3b8" d="M394.5,-856C437.6,-856 435.62,-906.13 470.97,-914.75"></path>
+<polygon fill="#94a3b8" stroke="#94a3b8" points="470.16,-918.18 480.5,-915.83 470.96,-911.22 470.16,-918.18"></polygon>
+</g>
+<!-- friends&#45;&gt;users -->
+<!-- friends&#45;&gt;users -->
+<g id="edge10" class="edge">
+<title>friends:e-&gt;users:w</title>
+<path fill="none" stroke="#94a3b8" d="M394.5,-916C429.29,-916 440.74,-916 470.6,-916"></path>
+<polygon fill="#94a3b8" stroke="#94a3b8" points="470.49,-919.5 480.49,-916 470.49,-912.5 470.49,-919.5"></polygon>
+</g>
+<!-- genres -->
+<g id="node6" class="node">
+<title>genres</title>
+<polygon fill="blue" stroke="none" points="433,-122 433,-182 919,-182 919,-122 433,-122"></polygon>
+<polygon fill="none" stroke="#29235c" points="433,-122 433,-182 919,-182 919,-122 433,-122"></polygon>
+<text text-anchor="start" x="623.53" y="-143.2" font-family="Helvetica,sans-Serif" font-weight="bold" font-size="32.00" fill="#ffffff">genres</text>
+<polygon fill="#e7e2dd" stroke="none" points="433,-62 433,-122 919,-122 919,-62 433,-62"></polygon>
+<polygon fill="none" stroke="#29235c" points="433,-62 433,-122 919,-122 919,-62 433,-62"></polygon>
+<text text-anchor="start" x="444" y="-82.2" font-family="Helvetica,sans-Serif" font-size="32.00" fill="#29235c">genre_id &#160;&#160;</text>
+<polygon fill="#e7e2dd" stroke="none" points="623.59,-72.6 623.59,-111 908,-111 908,-72.6 623.59,-72.6"></polygon>
+<text text-anchor="start" x="651.95" y="-83.2" font-family="Helvetica,sans-Serif" font-style="italic" font-size="32.00" fill="#29235c">INTEGER &#160;⤴️ pk</text>
+<polygon fill="#ffffff" stroke="none" points="433,-2 433,-62 919,-62 919,-2 433,-2"></polygon>
+<polygon fill="none" stroke="#29235c" points="433,-2 433,-62 919,-62 919,-2 433,-2"></polygon>
+<text text-anchor="start" x="444" y="-22.2" font-family="Helvetica,sans-Serif" font-size="32.00" fill="#29235c">genre_name &#160;&#160;</text>
+<polygon fill="#ffffff" stroke="none" points="650.36,-12.6 650.36,-51 908.2,-51 908.2,-12.6 650.36,-12.6"></polygon>
+<text text-anchor="start" x="650.36" y="-23.2" font-family="Helvetica,sans-Serif" font-style="italic" font-size="32.00" fill="#29235c">VARCHAR(255) &#160;&#160;</text>
+<polygon fill="none" stroke="#29235c" stroke-width="2" points="432,-1 432,-183 920,-183 920,-1 432,-1"></polygon>
+</g>
+<!-- genres_film -->
+<g id="node7" class="node">
+<title>genres_film</title>
+<polygon fill="blue" stroke="none" points="26.5,-272 26.5,-332 368.5,-332 368.5,-272 26.5,-272"></polygon>
+<polygon fill="none" stroke="#29235c" points="26.5,-272 26.5,-332 368.5,-332 368.5,-272 26.5,-272"></polygon>
+<text text-anchor="start" x="107.69" y="-293.2" font-family="Helvetica,sans-Serif" font-weight="bold" font-size="32.00" fill="#ffffff">genres_film</text>
+<polygon fill="#e7e2dd" stroke="none" points="26.5,-212 26.5,-272 368.5,-272 368.5,-212 26.5,-212"></polygon>
+<polygon fill="none" stroke="#29235c" points="26.5,-212 26.5,-272 368.5,-272 368.5,-212 26.5,-212"></polygon>
+<text text-anchor="start" x="37.5" y="-232.2" font-family="Helvetica,sans-Serif" font-size="32.00" fill="#29235c">film_id &#160;&#160;</text>
+<polygon fill="#e7e2dd" stroke="none" points="198.39,-222.6 198.39,-261 357.5,-261 357.5,-222.6 198.39,-222.6"></polygon>
+<text text-anchor="start" x="240.14" y="-233.2" font-family="Helvetica,sans-Serif" font-style="italic" font-size="32.00" fill="#29235c">LONG &#160;&#160;</text>
+<polygon fill="#ffffff" stroke="none" points="26.5,-152 26.5,-212 368.5,-212 368.5,-152 26.5,-152"></polygon>
+<polygon fill="none" stroke="#29235c" points="26.5,-152 26.5,-212 368.5,-212 368.5,-152 26.5,-152"></polygon>
+<text text-anchor="start" x="37.5" y="-172.2" font-family="Helvetica,sans-Serif" font-size="32.00" fill="#29235c">genre_id &#160;&#160;</text>
+<polygon fill="#ffffff" stroke="none" points="188.72,-162.6 188.72,-201 357.62,-201 357.62,-162.6 188.72,-162.6"></polygon>
+<text text-anchor="start" x="188.72" y="-173.2" font-family="Helvetica,sans-Serif" font-style="italic" font-size="32.00" fill="#29235c">INTEGER &#160;&#160;</text>
+<polygon fill="none" stroke="#29235c" stroke-width="2" points="25.5,-151 25.5,-333 369.5,-333 369.5,-151 25.5,-151"></polygon>
+</g>
+<!-- genres_film&#45;&gt;films -->
+<!-- genres_film&#45;&gt;films -->
+<g id="edge12" class="edge">
+<title>genres_film:e-&gt;films:w</title>
+<path fill="none" stroke="#94a3b8" d="M369.5,-242C432.31,-242 382.08,-499.71 431.21,-530.92"></path>
+<polygon fill="#94a3b8" stroke="#94a3b8" points="429.97,-534.2 440.54,-533.58 431.89,-527.47 429.97,-534.2"></polygon>
+</g>
+<!-- genres_film&#45;&gt;genres -->
+<!-- genres_film&#45;&gt;genres -->
+<g id="edge14" class="edge">
+<title>genres_film:e-&gt;genres:w</title>
+<path fill="none" stroke="#94a3b8" d="M369.5,-182C413.82,-182 388.9,-107.45 420.78,-94.05"></path>
+<polygon fill="#94a3b8" stroke="#94a3b8" points="421.3,-97.51 430.51,-92.27 420.05,-90.62 421.3,-97.51"></polygon>
+</g>
+</g>
+</svg>

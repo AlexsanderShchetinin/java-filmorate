@@ -18,12 +18,13 @@ import java.util.Collection;
 @RequiredArgsConstructor
 public class UserController {
 
-    private final UserService service;
+    private final UserService userServiceJdbcImpl;
+
 
     @GetMapping
     public Collection<User> getAll() {
         log.info("==> GET /users <==");
-        return service.getAll();
+        return userServiceJdbcImpl.getAll();
     }
 
     @PostMapping
@@ -31,7 +32,7 @@ public class UserController {
     @Validated(Marker.Create.class)
     public User create(@RequestBody @Valid User user) {
         log.info("Create User: {} - STARTED", user.getLogin());
-        User createdUser = service.create(user);
+        User createdUser = userServiceJdbcImpl.create(user);
         log.info("User {} with id={} - CREATED", user.getLogin(), user.getId());
         return createdUser;
     }
@@ -40,19 +41,19 @@ public class UserController {
     @Validated(Marker.Update.class)
     public User update(@RequestBody @Valid User newUser) {
         log.info("Update User: {} - STARTED", newUser.getLogin());
-        User updatedUser = service.update(newUser);
+        User updatedUser = userServiceJdbcImpl.update(newUser);
         log.info("User {}  with id={} UPDATED.", newUser.getLogin(), newUser.getId());
         return updatedUser;
     }
 
     /**
-     * @param id - идентификатор клиента, отправляющего запрос на сервер (т.е. тот кто отправляет приглашение)
-     * @param friendId  - идентификатор друга, к которому добавляются в друзья
+     * @param id       - идентификатор клиента, отправляющего запрос на сервер (т.е. тот кто отправляет приглашение)
+     * @param friendId - идентификатор друга, к которому добавляются в друзья
      */
     @PutMapping("/{id}/friends/{friendId}")
     public void addFriend(@PathVariable long id, @PathVariable long friendId) {
         log.info("Friend with id={} try add as friends to User with id={}", friendId, id);
-        User[] users = service.addFriend(id, friendId);
+        User[] users = userServiceJdbcImpl.addFriend(id, friendId);
         log.info("Friend {} with id={} successfully added as friends to User {} with id={}",
                 users[0].getName(), friendId, users[1].getName(), id);
     }
@@ -60,7 +61,7 @@ public class UserController {
     @DeleteMapping("/{id}/friends/{friendId}")
     public void removeFriend(@PathVariable long id, @PathVariable long friendId) {
         log.info("Friend with id={} try delete as friends to User with id={}", friendId, id);
-        User[] users = service.removeFriend(id, friendId);
+        User[] users = userServiceJdbcImpl.removeFriend(id, friendId);
         log.info("Friend {} with id={} successfully deleted as friends to User {} with id={}",
                 users[0].getName(), friendId, users[1].getName(), id);
     }
@@ -69,14 +70,14 @@ public class UserController {
     @GetMapping("/{id}/friends")
     public Collection<User> getFriends(@PathVariable long id) {
         log.info("==> GET /friends for user with id={} <==", id);
-        return service.getFriends(id);
+        return userServiceJdbcImpl.getFriends(id);
     }
 
     // возвращаем список друзей, общих с другим пользователем.
     @GetMapping("/{id}/friends/common/{otherId}")
     public Collection<User> getCommonFriends(@PathVariable long id, @PathVariable long otherId) {
         log.info("==> GET /common friends for users with id={} and {} <==", id, otherId);
-        return service.getCommonFriends(id, otherId);
+        return userServiceJdbcImpl.getCommonFriends(id, otherId);
     }
 
 

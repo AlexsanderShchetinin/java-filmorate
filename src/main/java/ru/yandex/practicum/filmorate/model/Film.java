@@ -2,10 +2,7 @@ package ru.yandex.practicum.filmorate.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.validation.constraints.*;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import ru.yandex.practicum.filmorate.validator.Marker;
 import ru.yandex.practicum.filmorate.validator.ReleaseDateLimitation;
 
@@ -19,6 +16,7 @@ import java.util.Set;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
+@EqualsAndHashCode(of = "id")
 public class Film {
     @Null(groups = Marker.Create.class, message = "При создании фильма id должно быть null.")
     @NotNull(groups = Marker.Update.class, message = "При обновлении фильма id не должно быть null.")
@@ -41,7 +39,7 @@ public class Film {
 
     private Set<Genre> genres;    // Жанр (у фильма может быть сразу несколько жанров)
 
-    private Rating rating;    // Рейтинг Ассоциации кинокомпаний
+    private Mpa mpa;    // Рейтинг Ассоциации кинокомпаний
 }
 
 

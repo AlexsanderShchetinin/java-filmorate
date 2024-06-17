@@ -4,17 +4,18 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.validation.constraints.*;
 import lombok.Builder;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import ru.yandex.practicum.filmorate.validator.Marker;
 
 import java.time.LocalDate;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.Set;
 
 /**
  * User.
  */
 @Data
 @Builder
+@EqualsAndHashCode(of = "id")
 public class User {
     @Null(groups = Marker.Create.class, message = "При создании пользователя id должно быть null.")
     @NotNull(groups = Marker.Update.class, message = "id пользователя не должно быть null.")
@@ -33,7 +34,7 @@ public class User {
     private LocalDate birthday;
 
     @JsonIgnore
-    private Map<Long, FriendStatus> friendsId = new HashMap<>();    // мапа для хранения id друзей и статуса дружбы
+    private Set<Long> friendIds;
 
 }
 

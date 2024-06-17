@@ -17,4 +17,4 @@ _Validation of the request body takes place inside
 the model classes using annotations above the fields_
 
 _Scheme of database_
-![Screenshot of a scheme diagram data base](/filmarateDiagram.png)
+![Screenshot of a scheme diagram data base](/filmorateDiagram.svg)
