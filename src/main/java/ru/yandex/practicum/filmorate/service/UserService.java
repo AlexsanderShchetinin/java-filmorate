@@ -7,9 +7,9 @@ import java.util.List;
 
 public interface UserService {
 
-    User[] addFriend(Long userId, Long friendId);
+    void addFriend(Long userId, Long friendId);
 
-    User[] removeFriend(Long userId, Long friendId);
+    void removeFriend(Long userId, Long friendId);
 
     List<User> getAll();
 

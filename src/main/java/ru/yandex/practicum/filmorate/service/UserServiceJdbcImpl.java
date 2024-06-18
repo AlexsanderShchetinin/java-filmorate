@@ -16,23 +16,21 @@ public class UserServiceJdbcImpl implements UserService {
     private final UserStorage userDbStorage;
 
     @Override
-    public User[] addFriend(Long userId, Long friendId) {
+    public void addFriend(Long userId, Long friendId) {
         User user = userDbStorage.get(userId)
                 .orElseThrow(() -> new NotFoundException("User not found with id=" + userId));
         User friend = userDbStorage.get(friendId)
                 .orElseThrow(() -> new NotFoundException("Friend not found with id=" + friendId));
         userDbStorage.addFriend(userId, friendId);
-        return new User[]{user, friend};
     }
 
     @Override
-    public User[] removeFriend(Long userId, Long friendId) {
+    public void removeFriend(Long userId, Long friendId) {
         User user = userDbStorage.get(userId)
                 .orElseThrow(() -> new NotFoundException("User not found with id=" + userId));
         User friend = userDbStorage.get(friendId)
                 .orElseThrow(() -> new NotFoundException("Friend not found with id=" + friendId));
         userDbStorage.removeFriend(userId, friendId);
-        return new User[]{user, friend};
     }
 
     @Override

@@ -53,17 +53,15 @@ public class UserController {
     @PutMapping("/{id}/friends/{friendId}")
     public void addFriend(@PathVariable long id, @PathVariable long friendId) {
         log.info("Friend with id={} try add as friends to User with id={}", friendId, id);
-        User[] users = userServiceJdbcImpl.addFriend(id, friendId);
-        log.info("Friend {} with id={} successfully added as friends to User {} with id={}",
-                users[0].getName(), friendId, users[1].getName(), id);
+        userServiceJdbcImpl.addFriend(id, friendId);
+        log.info("Friend with id={} successfully added as friends to User with id={}", friendId, id);
     }
 
     @DeleteMapping("/{id}/friends/{friendId}")
     public void removeFriend(@PathVariable long id, @PathVariable long friendId) {
         log.info("Friend with id={} try delete as friends to User with id={}", friendId, id);
-        User[] users = userServiceJdbcImpl.removeFriend(id, friendId);
-        log.info("Friend {} with id={} successfully deleted as friends to User {} with id={}",
-                users[0].getName(), friendId, users[1].getName(), id);
+        userServiceJdbcImpl.removeFriend(id, friendId);
+        log.info("Friend with id={} successfully deleted as friends to User with id={}", friendId, id);
     }
 
     // возвращаем список пользователей, являющихся друзьями для user.

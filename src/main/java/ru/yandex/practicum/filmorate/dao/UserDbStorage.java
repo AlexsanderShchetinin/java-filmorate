@@ -21,16 +21,6 @@ public class UserDbStorage implements UserStorage {
 
     private final NamedParameterJdbcOperations jdbc;
 
-/*    static User mapRowUser(ResultSet rs, int rowNum) throws SQLException {
-        return User.builder()
-                .id(rs.getLong("user_id"))
-                .login(rs.getString("login"))
-                .name(rs.getString("username"))
-                .email(rs.getString("email"))
-                .birthday(rs.getDate("birthday").toLocalDate())
-                .build();
-    }*/
-
     private MapSqlParameterSource getUserParams(User user) {
         MapSqlParameterSource map = new MapSqlParameterSource();
         map.addValues(Map.of("login", user.getLogin(),
